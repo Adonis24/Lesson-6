@@ -5,7 +5,6 @@
 //  Created by Чернецова Юлия on 08/12/2018.
 //  Copyright © 2018 Чернецов Роман. All rights reserved.
 //
-
 import Foundation
 //Перечисления
 //1. Двигатель (включен/выключен)
