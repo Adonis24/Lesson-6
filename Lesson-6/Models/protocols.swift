@@ -20,4 +20,29 @@ func changeCarState()
 
 
 }
+
+
+// Расширения протокола - методы вкл/выкл двигатель; открыть/закрыть двери
+extension Car{
+    
+    var engineState: EngineState{
+        get {return engineState}
+        set {engineState = newValue}
+    }
+    //    mutating func turnOnEngine(){
+    //
+    //        engineState =  EngineState.on
+    //    }
+    
+    mutating func turnOffEngine(){
+        engineState =  EngineState.off
+    }
+    
+    mutating func openWindow(){
+        windowState =  WindowState.open
+    }
+    
+    mutating func closeWindow(){
+        windowState =  WindowState.close
+    }
 }

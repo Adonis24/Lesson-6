@@ -8,5 +8,28 @@
 
 import Foundation
 
-print("Hello, World!")
+var car1 = trunkCar(yearOfManufacture: 2012, maxTrunkVolume: 30_000.0, mark: "Man", engineState: EngineState.off, windowState: WindowState.close, heightWork: 250, trunMode: TrunkMode.light, carrying: 2_000.0)
+var car2 = trunkCar(yearOfManufacture: 2014, maxTrunkVolume: 35_000.0, mark: "Kamaz", engineState: EngineState.off, windowState: WindowState.close, heightWork: 250, trunMode: TrunkMode.light, carrying: 2_000.0)
+
+
+//var car3 = sportCar(yearOfManufacture: 2014, maxTrunkVolume: 200.0, mark: "Opel", engineState: EngineState.on, windowState: WindowState.open, countHorsePower: 250, sportMode: SportMode.turnOff)
+
+var queue = Queue<trunkCar>()
+queue.push(element: car1)
+queue.push(element: car2)
+// subscript
+let test = queue[1] // queue[2] - nil
+if test != nil {
+    print(test!)
+}
+    else{
+    print("Значение за пределом очереди, nil")
+}
+
+
+
+
+
+
+
 
