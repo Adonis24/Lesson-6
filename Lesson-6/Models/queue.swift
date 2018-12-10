@@ -37,11 +37,9 @@ struct Queue<Cars:Equatable> {
         {
             return elements.isEmpty ? nil : elements[elements.count - 1]
         }
-    
-        
+
 }
    
-
     subscript (index: Int) -> Cars? {
     if index < self.elements.count {
      return self.elements[index]
