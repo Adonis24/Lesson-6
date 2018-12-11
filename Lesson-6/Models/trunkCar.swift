@@ -8,7 +8,7 @@
 
 import Foundation
 //Создаем класс грузовой автомобиль
-class trunkCar:Car,Equatable{
+class trunkCar:Car,Comparable{
  
     //общие свойства
     var yearOfManufacture: Int
@@ -42,13 +42,14 @@ class trunkCar:Car,Equatable{
    static func ==(lhs: trunkCar, rhs: trunkCar) -> Bool {
         return (lhs.mark == rhs.mark)&&(lhs.yearOfManufacture == rhs.yearOfManufacture)
     }
-//    static func >(lhs: trunkCar, rhs: trunkCar) -> Bool {
-//        return (lhs.yearOfManufacture > rhs.yearOfManufacture)
-//    }
-//    
-//    static func <(lhs: trunkCar, rhs: trunkCar) -> Bool {
-//        return (lhs.yearOfManufacture < rhs.yearOfManufacture)
-//    }
+    
+    static func >(lhs: trunkCar, rhs: trunkCar) -> Bool {
+        return (lhs.yearOfManufacture > rhs.yearOfManufacture)
+    }
+    
+    static func <(lhs: trunkCar, rhs: trunkCar) -> Bool {
+        return (lhs.yearOfManufacture < rhs.yearOfManufacture)
+    }
        //Функции поддержки прототокола Compatible
     
     init(yearOfManufacture: Int, maxTrunkVolume: Double, mark: String, engineState: EngineState, windowState: WindowState,heightWork:Int,trunMode:TrunkMode,carrying:Double){

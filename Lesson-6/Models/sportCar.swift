@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class sportCar:Car,Equatable {
+class sportCar:Car,Comparable {
     
     var yearOfManufacture: Int
     var maxTrunkVolume: Double
@@ -32,6 +32,15 @@ class sportCar:Car,Equatable {
      static func == (lhs: sportCar, rhs: sportCar) -> Bool {
         return (lhs.mark == rhs.mark)&&(lhs.yearOfManufacture == rhs.yearOfManufacture)
     }
+    
+    static func >(lhs: sportCar, rhs: sportCar) -> Bool {
+        return (lhs.yearOfManufacture > rhs.yearOfManufacture)
+    }
+    
+    static func <(lhs: sportCar, rhs: sportCar) -> Bool {
+        return (lhs.yearOfManufacture < rhs.yearOfManufacture)
+    }
+    //Функции поддержки прототокола Compatible
     
     init(yearOfManufacture: Int, maxTrunkVolume: Double, mark: String, engineState: EngineState, windowState: WindowState,countHorsePower:Int,sportMode:SportMode){
         self.countHorsePower = countHorsePower

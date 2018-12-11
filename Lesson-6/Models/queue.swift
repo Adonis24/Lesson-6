@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Queue<Cars:Equatable> {
+struct Queue<Cars:Comparable> {
     //массив объектов из экземпляров машин
      var elements: [Cars] = []
     
@@ -31,17 +31,21 @@ struct Queue<Cars:Equatable> {
         }
         return nil
     }
+
+    
     //Определение самого последнего элемента
-    mutating func topElement(){
+func topElement(){
        var topItem: Cars?
         {
             return elements.isEmpty ? nil : elements[elements.count - 1]
         }
 
 }
+    
    
     subscript (index: Int) -> Cars? {
     if index < self.elements.count {
+        
      return self.elements[index]
      } else {
     return nil
